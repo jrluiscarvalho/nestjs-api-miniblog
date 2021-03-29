@@ -8,7 +8,6 @@ export const databaseProviders = [
     provide: SEQUELIZE,
     useFactory: async () => {
       let config;
-      console.log(databaseConfig.development);
       switch (process.env.NODE_ENV) {
         case DEVELOPMENT:
           config = databaseConfig.development;
